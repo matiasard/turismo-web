@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <title>Login Page</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="logo" src="/assets/logo/logo-Cerro-de-colores.png" alt="logo">
+
+    <button class="open-menu" id="open-menu">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="mobile-menu disabled" id="mobile-menu">
+      <div class="mobile-menu__header">
+        <img src="/assets/logo/logo-Cerro-de-colores.png" alt="logo" class="logo">
+        <button class="close-menu" id="close-menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="mobile-menu__nav">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="#">Actividades</a></li>
+          <li><a href="#">Atractivos</a></li>
+          <li><a href="/pages/about-us.html">Acerca de nosotros</a></li>
+          <li><a href="login.html">Ingresar</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class="desktop-menu">
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="#">Actividades</a></li>
+        <li><a href="#">Atractivos</a></li>
+        <li><a href="/pages/about-us.html">Acerca de nosotros</a></li>
+        <li><a href="login.html">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="login-container">
+    <div class="login">
+      <div class="content">
+        <h1>Login</h1>
+        <form action="">
+          <div class="inputs">
+            <label for="">Email</label>
+            <input type="email" required>
+          </div>
+          <div class="inputs pass">
+            <label for="">Password</label>
+            <input type="password" required>
+          </div>
+          <div class="ml">
+            <input type="checkbox">
+            <label for="">Recuerdame</label>
+          </div>
+          <button>Iniciar Sesion</button>
+          <!-- <p>-------- <span>Or Sign up with</span> --------</p> -->
+          <!-- <div class="links">
+            <div class="google">
+              <img src="/assets/images-login/google.png" alt="">
+              <label for="">Google</label>
+            </div>
+            <div class="facebook">
+              <img src="/assets/images-login/facebook.png" alt="">
+              <label for="">Facebook</label>
+            </div>
+          </div> -->
+          <hr>
+          <div class="register-box">
+            <p>¿No tienes una cuenta? <span><a href="/pages/register.html">Regístrate</a></span></p>
+          </div>
+        </form>
+      </div>
+      <div class="image">
+        <img src="/assets/images-login/login.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let btnOpenMenu = document.querySelector("#open-menu")
+    let btnCloseMenu = document.querySelector("#close-menu")
+    let menu = document.querySelector("#mobile-menu")
+
+    btnOpenMenu.addEventListener("click", () => {
+      menu.classList.remove("disabled")
+    });
+
+    btnCloseMenu.addEventListener("click", () => {
+      menu.classList.add("disabled")
+    });
+  </script>
+</body>
+
+</html>

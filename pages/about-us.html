@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/about-us.css">
+  <title>Sobre Nosotros</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="logo" src="/assets/logo/logo-Cerro-de-colores.png" alt="logo">
+
+    <button class="open-menu" id="open-menu">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="mobile-menu disabled" id="mobile-menu">
+      <div class="mobile-menu__header">
+        <img src="/assets/logo/logo-Cerro-de-colores.png" alt="logo" class="logo">
+        <button class="close-menu" id="close-menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="mobile-menu__nav">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/index.html#actividades">Actividades</a></li>
+          <li><a href="/index.html#turistismo">Atractivos</a></li>
+          <li><a href="/pages/about-us.html">Acerca de nosotros</a></li>
+          <li><a href="/pages/login.html">Ingresar</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class="desktop-menu">
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/index.html#actividades">Actividades</a></li>
+        <li><a href="/index.html#turistismo">Atractivos</a></li>
+        <li><a href="/pages/about-us.html">Acerca de nosotros</a></li>
+        <li><a href="/pages/login.html">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-us">
+    <div class="about-us__container">
+      <h1 class="about-us__title">Sobre Nosotros</h1>
+      <p class="about-us__text">Bienvenido a CerroDeLosSieteColores, tu guía virtual para explorar la belleza y
+        diversidad
+        de la
+        provincia de Jujuy,
+        Argentina. Nos apasiona compartir las maravillas naturales, culturales y aventuras que este lugar tiene para
+        ofrecer.</p>
+
+      <p class="about-us__text">En CerroDeLosSieteColores, creemos en la conexión con la naturaleza, la celebración de
+        la rica
+        herencia cultural y la
+        creación de experiencias memorables. Nuestra misión es inspirarte a embarcarte en una aventura única,
+        descubriendo
+        cada rincón especial de esta joya del norte argentino.</p>
+
+      <p class="about-us__text">Explora con nosotros y déjate cautivar por la magia de Jujuy. ¡Te invitamos a descubrir,
+        disfrutar y crear
+        recuerdos inolvidables!</p>
+      <!-- </div> -->
+  </section>
+
+  <footer class="footer">
+
+    <div class="logo-menu">
+      <img class="logo" src="/assets/logo/logo-Cerro-de-colores.png" alt="logo">
+      <nav class="footer-menu">
+        <ul class="footer-menu__list">
+          <li class="footer-menu__item"><a href="#">About</a></li>
+          <li class="footer-menu__item"><a href="#">Careers</a></li>
+          <li class="footer-menu__item"><a href="#">Events</a></li>
+          <li class="footer-menu__item"><a href="#">Products</a></li>
+          <li class="footer-menu__item"><a href="#">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="icons-copyright">
+      <div class="icons">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-pinterest"></i>
+      </div>
+      <p class="copyright">@ 2024 cerrodelossietecolores. Todo los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    let btnOpenMenu = document.querySelector("#open-menu")
+    let btnCloseMenu = document.querySelector("#close-menu")
+    let menu = document.querySelector("#mobile-menu")
+
+    btnOpenMenu.addEventListener("click", () => {
+      menu.classList.remove("disabled")
+    });
+
+    btnCloseMenu.addEventListener("click", () => {
+      menu.classList.add("disabled")
+    });
+  </script>
+</body>
+
+</html>
