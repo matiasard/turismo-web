@@ -177,7 +177,8 @@ main {
 }
 
 .intro__info h2 {
-	font-size: 4.2rem;
+	/* font-size: 4.2rem; */
+	font-size: clamp(4.2rem, 5vw, 5rem);
 	text-transform: uppercase;
 }
 
@@ -212,8 +213,8 @@ main {
 
 .creations__grid > div {
 	background-size: cover;
-	height: 15rem;
-
+	/* height: 15rem; */
+	height: max(15rem, 30rem);
 	padding: 3rem;
 	display: flex;
 	align-items: end;
@@ -242,7 +243,8 @@ main {
 
 .creations__grid > div > h2 {
 	color: var(--white);
-	font-size: 2.9rem;
+	/* font-size: 2.9rem; */
+	font-size: clamp(2.9rem, 3vw, 3.3rem);
 	line-height: 1.3;
 	z-index: 1;
 }
@@ -251,10 +253,10 @@ main {
 	background-image: url("/assets/images/estatua-humahuaca-argentina.jpg");
 }
 .creations__grid > div:nth-child(2) {
-	background-image: url("/assets/images/catedral-san-salvador-jujuy.jpg");
+	background-image: url("/assets/images-actividad/Actividad-AVENTURA-NATURALEZA.png");
 }
 .creations__grid > div:nth-child(3) {
-	background-image: url("/assets/images/catedral-san-salvador-jujuy.jpg");
+	background-image: url("/assets/images-actividad/Cocina_Vinos1-300x300.png");
 }
 .creations__grid > div:nth-child(4) {
 	background-image: url("/assets/images/catedral-san-salvador-jujuy.jpg");
@@ -581,27 +583,16 @@ main {
 		text-align: left;
 	}
 
-	.intro__info h2 {
-		font-size: 4.3rem;
-	}
-
-	.creations h2 {
-		font-size: 3.8rem;
-	}
-
 	.creations__grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		/* grid-template-columns: repeat(2, 1fr); */
+		grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
 		column-gap: 5rem;
 		row-gap: 4rem;
 	}
 
 	.creations__grid > div {
 		height: 30rem;
-	}
-
-	.creations__grid > div > h2 {
-		font-size: 2.2rem;
 	}
 
 	.region {
@@ -644,12 +635,9 @@ main {
 }
 
 @media screen and (min-width: 992px) {
-	.creations__grid > div > h2 {
-		font-size: 3.3rem;
-	}
-	.intro__info h2 {
+	/* .intro__info h2 {
 		font-size: 5rem;
-	}
+	} */
 }
 
 /* MOBILE MENU NAVBAR  */
