@@ -188,22 +188,22 @@ main {
 	line-height: 1.8;
 }
 
-/* ---------- CREATIONS -------------  */
+/* ---------- SECCION ACTIVIDAD -------------  */
 
-.creations {
+.activities {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 4rem;
 }
 
-.creations > h2 {
+.activities > h2 {
 	font-size: 4rem;
 	text-align: center;
 	text-transform: uppercase;
 }
 
-.creations__grid {
+.activities__grid {
 	text-transform: uppercase;
 	display: flex;
 	flex-direction: column;
@@ -211,7 +211,7 @@ main {
 	width: 100%;
 }
 
-.creations__grid > div {
+.activities__grid > div {
 	background-size: cover;
 	/* height: 15rem; */
 	height: max(15rem, 30rem);
@@ -222,7 +222,7 @@ main {
 	z-index: 0;
 }
 
-/* .creations__grid > div::before {
+/* .activities__grid > div::before {
 	content: "";
 	position: absolute;
 	height: 100%;
@@ -231,7 +231,7 @@ main {
 	background-color: rgba(0, 0, 0, 0.4);
 	z-index: -1;
 } */
-.creations__grid > div::before {
+.activities__grid > div::before {
 	content: "";
 	position: absolute;
 	height: 100%;
@@ -241,7 +241,7 @@ main {
 	z-index: 0;
 }
 
-.creations__grid > div > h2 {
+.activities__grid > div > h2 {
 	color: var(--white);
 	/* font-size: 2.9rem; */
 	font-size: clamp(2.9rem, 3vw, 3.3rem);
@@ -249,30 +249,33 @@ main {
 	z-index: 1;
 }
 
-.creations__grid > div:nth-child(1) {
-	background-image: url("/assets/images/estatua-humahuaca-argentina.jpg");
-}
-.creations__grid > div:nth-child(2) {
+.activities__grid > div:nth-child(1) {
 	background-image: url("/assets/images-actividad/Actividad-AVENTURA-NATURALEZA.png");
 }
-.creations__grid > div:nth-child(3) {
+.activities__grid > div:nth-child(2) {
 	background-image: url("/assets/images-actividad/Cocina_Vinos1-300x300.png");
 }
-.creations__grid > div:nth-child(4) {
+/* .activities__grid > div:nth-child(3) {
+	background-image: url("/assets/images-actividad/Actividad-cultural-1.png");
+} */
+.activities__grid > div:nth-child(3) {
+	background-image: url("/assets/images-actividad/Actividad-imperdibles-1.png");
+}
+.activities__grid > div:nth-child(4) {
+	background-image: url("/assets/images-actividad/Actividad-cultural-1.png");
+}
+.activities__grid > div:nth-child(5) {
+	background-image: url("/assets/images-actividad/Actividad-religioso-1.png");
+}
+.activities__grid > div:nth-child(6) {
+	background-image: url("/assets/images-actividad/Actividad-turismo-comunitario-2.png");
+}
+.activities__grid > div:nth-child(7) {
 	background-image: url("/assets/images/catedral-san-salvador-jujuy.jpg");
 }
-.creations__grid > div:nth-child(5) {
+/* .activities__grid > div:nth-child(8) {
 	background-image: url("/assets/images/catedral-san-salvador-jujuy.jpg");
-}
-.creations__grid > div:nth-child(6) {
-	background-image: url("/assets/images/catedral-san-salvador-jujuy.jpg");
-}
-.creations__grid > div:nth-child(7) {
-	background-image: url("/assets/images/catedral-san-salvador-jujuy.jpg");
-}
-.creations__grid > div:nth-child(8) {
-	background-image: url("/assets/images/catedral-san-salvador-jujuy.jpg");
-}
+} */
 
 /* ---------- BUTTON -------------  */
 
@@ -337,16 +340,17 @@ main {
 	display: grid;
 	grid-template-areas:
 		"title title title"
-		"content content content";
+		"content content content"
+		"btn btn btn";
 	gap: 4rem;
 }
 
 .attractions__title {
+	grid-area: title;
 	font-size: 4rem;
 	text-transform: uppercase;
 	text-align: center;
 	/* color: var(--primary-color); */
-	grid-area: title;
 }
 
 .atractions__cards {
@@ -381,6 +385,11 @@ main {
 	padding: 0 10px 10px 10px;
 	color: #757575;
 	font-size: 1.7rem;
+}
+
+.attractions .btn {
+	grid-area: btn;
+	margin: 0 auto;
 }
 
 /* ---------- FOOTER -------------  */
@@ -500,6 +509,14 @@ main {
 	width: max(100%, 310px);
 }
 
+@media only screen and (min-width: 576px) {
+	.activities__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2.5rem;
+	}
+}
+
 /* ---------- MEDIA QUERYS -------------  */
 @media screen and (min-width: 768px) {
 	/* .hero {
@@ -583,7 +600,7 @@ main {
 		text-align: left;
 	}
 
-	.creations__grid {
+	.activities__grid {
 		display: grid;
 		/* grid-template-columns: repeat(2, 1fr); */
 		grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
@@ -591,9 +608,13 @@ main {
 		row-gap: 4rem;
 	}
 
-	.creations__grid > div {
+	.activities__grid > div {
 		height: 30rem;
 	}
+
+	/* .activities__grid > div:nth-child(6) {
+		background-image: url("/assets/images-actividad/Actividad-turismo-comunitario.png");
+	} */
 
 	.region {
 		max-width: var(--max-width);
