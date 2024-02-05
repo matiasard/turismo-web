@@ -54,7 +54,8 @@ a {
 }
 
 .header {
-	background-color: #009ace;
+	/* background-color: #009ace; */
+	background-color: var(--black);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

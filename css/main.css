@@ -86,7 +86,8 @@ a {
 	padding: 2rem 5rem;
 } */
 .header {
-	background-color: #009ace;
+	/* background-color: #009ace; */
+	background-color: var(--black);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -244,7 +245,7 @@ main {
 .activities__grid > div > h2 {
 	color: var(--white);
 	/* font-size: 2.9rem; */
-	font-size: clamp(2.9rem, 3vw, 3.3rem);
+	font-size: clamp(2.9rem, 3vw, 3.1rem);
 	line-height: 1.3;
 	z-index: 1;
 }
@@ -384,7 +385,7 @@ main {
 .attraction-card p {
 	padding: 0 10px 10px 10px;
 	color: #757575;
-	font-size: 1.7rem;
+	/* font-size: 1.7rem; */
 }
 
 .attractions .btn {
@@ -514,6 +515,10 @@ main {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2.5rem;
+	}
+
+	.attraction-card p {
+		font-size: 1.7rem;
 	}
 }
 
